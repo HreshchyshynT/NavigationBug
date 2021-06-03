@@ -46,13 +46,4 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$rootProject.nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$rootProject.nav_version"
     androidTestImplementation "androidx.navigation:navigation-testing:$rootProject.nav_version"
-
-    //Lifecycle
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$rootProject.lifecycle_version"
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$rootProject.lifecycle_version"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$rootProject.lifecycle_version"
-    implementation "androidx.lifecycle:lifecycle-common-java8:$rootProject.lifecycle_version"
-
-    def coroutines_version = "1.4.2"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
 }
