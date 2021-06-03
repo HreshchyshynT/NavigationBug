@@ -2,18 +2,17 @@ package com.example.navigationbug
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import com.example.navigationbug.ui.main.MainFragment
-import java.lang.IllegalStateException
+
 /**
-    STEPS TO REPRODUCE:
-        1. Enable "Don't keep activities" option in developer's settings"
-        2. Launch app: Fragment one is visible
-        3. Move app to background by pressing "Home" button
-        4. Open app again: Fragment app is still visible, but Fragment two should be visible (bool value is false) - BUG
+STEPS TO REPRODUCE:
+1. Enable "Don't keep activities" option in developer's settings"
+2. Launch app: Fragment one is visible
+3. Move app to background by pressing "Home" button
+4. Open app again: Fragment app is still visible, but Fragment two should be visible (bool value is false) - BUG
  */
 class MainActivity : AppCompatActivity() {
 
@@ -30,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun createGraph(bool: Boolean) {
+        Toast.makeText(this, "Is session active: $bool", Toast.LENGTH_SHORT).show()
         log("one: ${R.id.fragment_one}, two: ${R.id.fragment_two}")
         val graph =
             if (bool) {
